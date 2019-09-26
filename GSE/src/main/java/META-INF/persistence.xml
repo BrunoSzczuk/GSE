@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>br.com.gestmax.GSE.domain.Empresa</class>
+        <class>br.com.gestmax.GSE.domain.Estado</class>
+        <class>br.com.gestmax.GSE.domain.ExcecaoFiscal</class>
+        <class>br.com.gestmax.GSE.domain.Filial</class>
+        <class>br.com.gestmax.GSE.domain.GrupoProduto</class>
+        <class>br.com.gestmax.GSE.domain.GrupoTributacao</class>
+        <class>br.com.gestmax.GSE.domain.GrupoUsuario</class>
+        <class>br.com.gestmax.GSE.domain.ImpostoItem</class>
+        <class>br.com.gestmax.GSE.domain.ImpostoPadraoPorFilial</class>
+        <class>br.com.gestmax.GSE.domain.Marca</class>
+        <class>br.com.gestmax.GSE.domain.Municipio</class>
+        <class>br.com.gestmax.GSE.domain.Pais</class>
+        <class>br.com.gestmax.GSE.domain.Permissao</class>
+        <class>br.com.gestmax.GSE.domain.Privilegio</class>
+        <class>br.com.gestmax.GSE.domain.PrivilegioUsuario</class>
+        <class>br.com.gestmax.GSE.domain.Produto</class>
+        <class>br.com.gestmax.GSE.domain.RateioCusto</class>
+        <class>br.com.gestmax.GSE.domain.RateioCustoItem</class>
+        <class>br.com.gestmax.GSE.domain.SubGrupoProduto</class>
+        <class>br.com.gestmax.GSE.domain.TabPreco</class>
+        <class>br.com.gestmax.GSE.domain.TabPrecoItem</class>
+        <class>br.com.gestmax.GSE.domain.TabPrecoUsuario</class>
+        <class>br.com.gestmax.GSE.domain.Unidade</class>
+        <class>br.com.gestmax.GSE.domain.Usuario</class>
+        <class>br.com.gestmax.GSE.domain.UsuarioFilial</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5433/gestmax"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
