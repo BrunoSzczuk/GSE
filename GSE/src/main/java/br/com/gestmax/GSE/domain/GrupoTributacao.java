@@ -8,11 +8,11 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class GrupoTributacao {
+public class GrupoTributacao implements BasicDomain{
     @Id
-    private Integer id;
+    private Long id;
     private String dsGrupotrib;
     @OneToMany(mappedBy = "grupoTributacao")
-    private Collection<ExcecaoFiscal> excecaofiscalsById;
+    private Collection<ExcecaoFiscal> execaoFiscals;
 
 }

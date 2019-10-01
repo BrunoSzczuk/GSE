@@ -1,5 +1,6 @@
 package br.com.gestmax.GSE.domain;
 
+import br.com.gestmax.GSE.domain.enums.TipoCliente;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -11,30 +12,29 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class TabPreco {
+public class TabPreco implements BasicDomain {
     @Id
-    private Integer id;
+    private Long id;
     @Column(name = "cd_tabpreco", nullable = false, length = 5)
-    private String cdTabpreco;
+    private String cdTabPreco;
     @Column(name = "ds_tabpreco", nullable = true, length = 100)
-    private String dsTabpreco;
+    private String dsTabPreco;
     private Date dtVigencia;
-    private Date dtVigenciafim;
+    private Date dtVigenciaFim;
     private Integer kmDistancia;
     private BigDecimal pcComissao;
     private BigDecimal pcAcordo;
     private BigDecimal pcJuromes;
     private Integer nrDiaspagto;
-    private Timestamp dtUltimaatualizacao;
+    private Timestamp dtUltimaAtualizacao;
     private BigDecimal vlKm;
     private Boolean stAtualizar;
     private Boolean stExcluido;
     private Boolean stAtivo;
-    @Column(name = "tp_cliente", nullable = true, length = 100)
-    //ENUM
-    private String tpCliente;
+    @Enumerated(EnumType.STRING)
+    private TipoCliente tpCliente;
     private Boolean stAtualizatotvs;
-    private BigDecimal pcFreteterceiro;
+    private BigDecimal pcFreteTerrceiro;
     private BigDecimal pcPromotor;
     @ManyToOne
     private Filial filial;
@@ -54,29 +54,29 @@ public class TabPreco {
         if (o == null || getClass() != o.getClass()) return false;
         TabPreco tabpreco = (TabPreco) o;
         return Objects.equals(id, tabpreco.id) &&
-                Objects.equals(cdTabpreco, tabpreco.cdTabpreco) &&
-                Objects.equals(dsTabpreco, tabpreco.dsTabpreco) &&
+                Objects.equals(cdTabPreco, tabpreco.cdTabPreco) &&
+                Objects.equals(dsTabPreco, tabpreco.dsTabPreco) &&
                 Objects.equals(dtVigencia, tabpreco.dtVigencia) &&
-                Objects.equals(dtVigenciafim, tabpreco.dtVigenciafim) &&
+                Objects.equals(dtVigenciaFim, tabpreco.dtVigenciaFim) &&
                 Objects.equals(kmDistancia, tabpreco.kmDistancia) &&
                 Objects.equals(pcComissao, tabpreco.pcComissao) &&
                 Objects.equals(pcAcordo, tabpreco.pcAcordo) &&
                 Objects.equals(pcJuromes, tabpreco.pcJuromes) &&
                 Objects.equals(nrDiaspagto, tabpreco.nrDiaspagto) &&
-                Objects.equals(dtUltimaatualizacao, tabpreco.dtUltimaatualizacao) &&
+                Objects.equals(dtUltimaAtualizacao, tabpreco.dtUltimaAtualizacao) &&
                 Objects.equals(vlKm, tabpreco.vlKm) &&
                 Objects.equals(stAtualizar, tabpreco.stAtualizar) &&
                 Objects.equals(stExcluido, tabpreco.stExcluido) &&
                 Objects.equals(stAtivo, tabpreco.stAtivo) &&
                 Objects.equals(tpCliente, tabpreco.tpCliente) &&
                 Objects.equals(stAtualizatotvs, tabpreco.stAtualizatotvs) &&
-                Objects.equals(pcFreteterceiro, tabpreco.pcFreteterceiro) &&
+                Objects.equals(pcFreteTerrceiro, tabpreco.pcFreteTerrceiro) &&
                 Objects.equals(pcPromotor, tabpreco.pcPromotor);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cdTabpreco, dsTabpreco, dtVigencia, dtVigenciafim, kmDistancia, pcComissao, pcAcordo, pcJuromes, nrDiaspagto, dtUltimaatualizacao, vlKm, stAtualizar, stExcluido, stAtivo, tpCliente, stAtualizatotvs, pcFreteterceiro, pcPromotor);
+        return Objects.hash(id, cdTabPreco, dsTabPreco, dtVigencia, dtVigenciaFim, kmDistancia, pcComissao, pcAcordo, pcJuromes, nrDiaspagto, dtUltimaAtualizacao, vlKm, stAtualizar, stExcluido, stAtivo, tpCliente, stAtualizatotvs, pcFreteTerrceiro, pcPromotor);
     }
 
 }

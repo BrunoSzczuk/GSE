@@ -11,9 +11,9 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class GrupoProduto {
+public class GrupoProduto implements BasicDomain{
     @Id
-    private Integer id;
+    private Long id;
     private String dsGrupo;
     private Boolean stAtivo;
     private String cdGrupo;

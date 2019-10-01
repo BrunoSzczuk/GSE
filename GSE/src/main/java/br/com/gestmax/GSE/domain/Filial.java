@@ -8,11 +8,12 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class Filial {
+public class Filial implements BasicDomain{
     @Id
-    private Integer id;
+    private Long id;
     private String cdFilial;
-    private String nmRazaosocial;
+    @Column(name = "nm_razaoSocial")
+    private String nmRazaoSocial;
     private String nmFantasia;
     private String dsEndereco;
     private String dsBairro;
@@ -46,7 +47,7 @@ public class Filial {
     @OneToMany(mappedBy = "filial")
     private Collection<TabPrecoItem> tabPrecoItems;
     @OneToMany(mappedBy = "filial")
-    private Collection<UsuarioFilial> usuariofilialsById;
+    private Collection<UsuarioFilial> usuarioFilials;
 
 
     @Override
@@ -56,7 +57,7 @@ public class Filial {
         Filial filial = (Filial) o;
         return Objects.equals(id, filial.id) &&
                 Objects.equals(cdFilial, filial.cdFilial) &&
-                Objects.equals(nmRazaosocial, filial.nmRazaosocial) &&
+                Objects.equals(nmRazaoSocial, filial.nmRazaoSocial) &&
                 Objects.equals(nmFantasia, filial.nmFantasia) &&
                 Objects.equals(dsEndereco, filial.dsEndereco) &&
                 Objects.equals(dsBairro, filial.dsBairro) &&
@@ -71,7 +72,7 @@ public class Filial {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cdFilial, nmRazaosocial, nmFantasia, dsEndereco, dsBairro, nrCep, nrDdd, nrTelefone, nrCnpj, nrIe, cdCliente, nrLoja);
+        return Objects.hash(id, cdFilial, nmRazaoSocial, nmFantasia, dsEndereco, dsBairro, nrCep, nrDdd, nrTelefone, nrCnpj, nrIe, cdCliente, nrLoja);
     }
 
 

@@ -31,7 +31,7 @@ public class ProdutoDTO extends BasicDTO {
     private BigDecimal qtMultiplicador;
     private String cdEan;
     private Collection<ImpostoItem> impostoItems;
-    private Unidade unidade;
+    private UnidadeMedida unidadeMedida;
     private Marca marca;
     private SubGrupoProduto subGrupoProduto;
 

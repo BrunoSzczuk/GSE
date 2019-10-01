@@ -25,7 +25,7 @@
         <class>br.com.gestmax.GSE.domain.TabPreco</class>
         <class>br.com.gestmax.GSE.domain.TabPrecoItem</class>
         <class>br.com.gestmax.GSE.domain.TabPrecoUsuario</class>
-        <class>br.com.gestmax.GSE.domain.Unidade</class>
+        <class>br.com.gestmax.GSE.domain.UnidadeMedida</class>
         <class>br.com.gestmax.GSE.domain.Usuario</class>
         <class>br.com.gestmax.GSE.domain.UsuarioFilial</class>
         <properties>

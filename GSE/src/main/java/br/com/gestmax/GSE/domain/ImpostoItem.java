@@ -12,9 +12,9 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class ImpostoItem {
+public class ImpostoItem implements BasicDomain{
     @Id
-    private Integer id;
+    private Long id;
     private BigDecimal vlPautaicms;
     private BigDecimal pcMva;
     private BigDecimal pcIpi;

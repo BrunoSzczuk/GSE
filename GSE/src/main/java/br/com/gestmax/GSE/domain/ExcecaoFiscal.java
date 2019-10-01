@@ -2,15 +2,18 @@ package br.com.gestmax.GSE.domain;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
 @Data
-public class ExcecaoFiscal {
+public class ExcecaoFiscal implements BasicDomain{
     @Id
-    private Integer id;
+    private Long id;
     private Integer nrSequencia;
     @Column(length = 100)
     private String tpCliente;

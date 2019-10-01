@@ -43,7 +43,7 @@ public class Produto implements BasicDomain {
     @OneToMany(mappedBy = "produto")
     private Collection<ImpostoItem> impostoItems;
     @ManyToOne
-    private Unidade unidade;
+    private UnidadeMedida unidadeMedida;
     @ManyToOne
     private Marca marca;
     @ManyToOne

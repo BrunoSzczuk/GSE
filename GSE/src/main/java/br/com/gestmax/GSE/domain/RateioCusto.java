@@ -13,9 +13,9 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class RateioCusto {
+public class RateioCusto implements BasicDomain {
     @Id
-    private Integer id;
+    private Long id;
     private Date dtCompetencia;
     private BigDecimal vlRateio;
     private BigDecimal pcMargem;

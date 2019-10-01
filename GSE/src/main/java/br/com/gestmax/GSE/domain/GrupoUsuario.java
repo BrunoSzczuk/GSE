@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class GrupoUsuario {
+public class GrupoUsuario implements BasicDomain{
 
     @Id
-    private Integer id;
+    private Long id;
     private Boolean stAtivo;
     private String dsTipousuario;
     @OneToMany(mappedBy = "grupoUsuario")
