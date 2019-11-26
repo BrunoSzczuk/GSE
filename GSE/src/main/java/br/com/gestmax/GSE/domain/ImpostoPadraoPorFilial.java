@@ -2,16 +2,15 @@ package br.com.gestmax.GSE.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
 @Data
-public class ImpostoPadraoPorFilial implements BasicDomain{
+public class ImpostoPadraoPorFilial implements BasicDomain {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private BigDecimal pcIcmsinterno;
     private BigDecimal pcCsll;

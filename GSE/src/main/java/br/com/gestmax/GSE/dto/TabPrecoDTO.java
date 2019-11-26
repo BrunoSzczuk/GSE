@@ -3,6 +3,7 @@ package br.com.gestmax.GSE.dto;
 import br.com.gestmax.GSE.domain.*;
 import br.com.gestmax.GSE.domain.enums.TipoCliente;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -10,6 +11,7 @@ import java.sql.Timestamp;
 import java.util.Collection;
 
 @Data
+@NoArgsConstructor
 public class TabPrecoDTO extends BasicDTO<TabPreco> {
     private Long id;
     private String cdTabPreco;

@@ -5,12 +5,14 @@ import br.com.gestmax.GSE.domain.Filial;
 import br.com.gestmax.GSE.domain.ImpostoItem;
 import br.com.gestmax.GSE.domain.Produto;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.Timestamp;
 
 @Data
+@NoArgsConstructor
 public class ImpostoItemDTO extends BasicDTO<ImpostoItem> {
     private Long id;
     private BigDecimal vlPautaicms;

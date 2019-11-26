@@ -5,10 +5,12 @@ import br.com.gestmax.GSE.domain.GrupoProduto;
 import br.com.gestmax.GSE.domain.Produto;
 import br.com.gestmax.GSE.domain.SubGrupoProduto;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Collection;
 
 @Data
+@NoArgsConstructor
 public class SubGrupoProdutoDTO extends BasicDTO<SubGrupoProduto> {
     private Long id;
     private String cdSubgrupo;

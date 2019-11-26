@@ -2,17 +2,15 @@ package br.com.gestmax.GSE.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Data
-public class Municipio implements BasicDomain{
+public class Municipio implements BasicDomain {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nmMunicipio;
     private Integer qtPopulacao;

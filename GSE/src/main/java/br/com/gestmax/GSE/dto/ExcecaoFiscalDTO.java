@@ -5,12 +5,14 @@ import br.com.gestmax.GSE.domain.Estado;
 import br.com.gestmax.GSE.domain.Filial;
 import br.com.gestmax.GSE.domain.GrupoTributacao;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 
 @Data
+@NoArgsConstructor
 public class ExcecaoFiscalDTO extends BasicDTO<ExcecaoFiscal> {
     private Long id;
     private Integer nrSequencia;

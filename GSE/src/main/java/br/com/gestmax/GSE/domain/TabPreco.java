@@ -14,6 +14,8 @@ import java.util.Objects;
 @Data
 public class TabPreco implements BasicDomain {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
     @Column(name = "cd_tabpreco", nullable = false, length = 5)
     private String cdTabPreco;

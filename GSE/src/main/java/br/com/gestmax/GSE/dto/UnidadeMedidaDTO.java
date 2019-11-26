@@ -3,10 +3,12 @@ package br.com.gestmax.GSE.dto;
 import br.com.gestmax.GSE.domain.Produto;
 import br.com.gestmax.GSE.domain.UnidadeMedida;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Collection;
 
 @Data
+@NoArgsConstructor
 public class UnidadeMedidaDTO extends BasicDTO<UnidadeMedida> {
     private Long id;
     private String cdUnidadeMedida;

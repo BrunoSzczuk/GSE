@@ -2,10 +2,7 @@ package br.com.gestmax.GSE.domain;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -13,7 +10,8 @@ import java.util.Objects;
 @Data
 public class Privilegio {
     @Id
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @Column(length = 100)
     private String nmPrivilegio;
     @OneToMany(mappedBy = "privilegio")

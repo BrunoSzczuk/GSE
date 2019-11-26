@@ -1,6 +1,8 @@
 package br.com.gestmax.GSE.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -8,13 +10,17 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class Estado implements BasicDomain{
+@NoArgsConstructor
+@AllArgsConstructor
+public class Estado implements BasicDomain {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(length = 60)
     private String nmEstado;
     private String cdIbge;
 
+    @Column(length = 2)
     private String sgEstado;
     @ManyToOne
     private Pais pais;

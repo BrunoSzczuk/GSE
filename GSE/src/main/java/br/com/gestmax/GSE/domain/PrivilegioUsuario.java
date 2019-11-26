@@ -1,14 +1,13 @@
 package br.com.gestmax.GSE.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class PrivilegioUsuario {
     @Id
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @ManyToOne
     private Usuario usuario;
     @ManyToOne

@@ -12,6 +12,8 @@ import java.util.Objects;
 @Data
 public class Produto implements BasicDomain {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
     @Column(nullable = false, length = 15)
     private String cdProduto;

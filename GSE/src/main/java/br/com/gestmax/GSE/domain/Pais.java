@@ -2,9 +2,9 @@ package br.com.gestmax.GSE.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -12,11 +12,14 @@ import java.util.Objects;
 @Data
 public class Pais implements BasicDomain {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @NotNull(message = "{pais_nome_not_null}")
+    @Size(min = 2, max = 60, message = "{pais_nome_size}")
     private String nmPais;
+    @NotNull(message = "{pais_sigla_not_null}")
+    @Size(min = 2, max = 60, message = "{pais_sigla_size}")
     private String sgPais;
-    @OneToMany(mappedBy = "pais")
-    private Collection<Estado> estados;
 
 
     @Override

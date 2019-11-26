@@ -10,17 +10,27 @@ import java.util.Objects;
 @Data
 public class Filial implements BasicDomain{
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(length = 30)
     private String cdFilial;
-    @Column(name = "nm_razaoSocial")
+    @Column(length = 60)
     private String nmRazaoSocial;
+    @Column(length = 60)
     private String nmFantasia;
+    @Column(length = 60)
     private String dsEndereco;
+    @Column(length = 60)
     private String dsBairro;
+    @Column(length = 9)
     private String nrCep;
+    @Column(length = 3)
     private String nrDdd;
+    @Column(length = 20)
     private String nrTelefone;
+    @Column(length = 14)
     private String nrCnpj;
+    @Column(length = 20)
     private String nrIe;
     private String cdCliente;
     private String nrLoja;

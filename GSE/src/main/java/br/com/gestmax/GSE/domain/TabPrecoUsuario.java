@@ -2,15 +2,14 @@ package br.com.gestmax.GSE.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Data
 public class TabPrecoUsuario {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @ManyToOne
     private Usuario usuario;

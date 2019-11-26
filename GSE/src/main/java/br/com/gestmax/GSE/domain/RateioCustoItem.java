@@ -10,6 +10,7 @@ import java.util.Objects;
 @Data
 public class RateioCustoItem {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private BigDecimal qtProduto;
     private BigDecimal vlCustomedio;

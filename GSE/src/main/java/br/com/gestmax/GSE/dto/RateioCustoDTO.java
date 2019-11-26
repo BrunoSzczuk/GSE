@@ -5,12 +5,14 @@ import br.com.gestmax.GSE.domain.RateioCusto;
 import br.com.gestmax.GSE.domain.RateioCustoItem;
 import br.com.gestmax.GSE.domain.TabPreco;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Collection;
 
 @Data
+@NoArgsConstructor
 public class RateioCustoDTO extends BasicDTO<RateioCusto> {
     private Long id;
     private Date dtCompetencia;

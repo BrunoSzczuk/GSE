@@ -1,9 +1,7 @@
 package br.com.gestmax.GSE.resource;
 
 import br.com.gestmax.GSE.domain.BasicDomain;
-import br.com.gestmax.GSE.domain.Empresa;
 import br.com.gestmax.GSE.dto.BasicDTO;
-import br.com.gestmax.GSE.dto.EmpresaDTO;
 import br.com.gestmax.GSE.resource.utils.URL;
 import br.com.gestmax.GSE.service.BasicService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,11 +37,11 @@ public abstract class BasicResource<T extends BasicService, E extends BasicDTO, 
     }
 
 
-    public Page<E> findPage(String descricao,
-                            Integer page,
-                            Integer linesPerPage,
-                            String orderBy,
-                            String direction) {
+    public Page findPage(String descricao,
+                         Integer page,
+                         Integer linesPerPage,
+                         String orderBy,
+                         String direction) {
 
         return service.search(descricao, page, linesPerPage, orderBy, direction).map(obj -> {
             try {
@@ -73,6 +71,7 @@ public abstract class BasicResource<T extends BasicService, E extends BasicDTO, 
     @PostMapping
     public ResponseEntity<Void> insert(@Valid @RequestBody E objDto) {
         DOMAIN obj = (DOMAIN) service.fromDTO(objDto);
+        obj.setId(null);
         obj = (DOMAIN) service.insert(obj);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(obj.getId()).toUri();

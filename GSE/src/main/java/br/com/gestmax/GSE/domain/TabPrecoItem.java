@@ -12,6 +12,8 @@ import java.util.Objects;
 @Data
 public class TabPrecoItem {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Integer id;
     private Integer nrItem;
     private BigDecimal vlPreco;

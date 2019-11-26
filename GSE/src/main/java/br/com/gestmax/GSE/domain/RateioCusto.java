@@ -2,10 +2,7 @@ package br.com.gestmax.GSE.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Collection;
@@ -15,6 +12,7 @@ import java.util.Objects;
 @Data
 public class RateioCusto implements BasicDomain {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date dtCompetencia;
     private BigDecimal vlRateio;
