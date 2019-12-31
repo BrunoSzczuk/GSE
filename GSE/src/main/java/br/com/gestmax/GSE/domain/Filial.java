@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @Entity
 @Data
-public class Filial implements BasicDomain{
+public class Filial implements BasicDomain {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -34,30 +34,10 @@ public class Filial implements BasicDomain{
     private String nrIe;
     private String cdCliente;
     private String nrLoja;
-    @OneToMany(mappedBy = "filial")
-    private Collection<ExcecaoFiscal> execaoFiscais;
     @ManyToOne
     private Municipio municipio;
     @ManyToOne
     private Empresa empresa;
-    @OneToMany(mappedBy = "filial")
-    private Collection<GrupoProduto> grupoProdutos;
-    @OneToMany(mappedBy = "filial")
-    private Collection<ImpostoItem> impostoItems;
-    @OneToMany(mappedBy = "filial")
-    private Collection<ImpostoPadraoPorFilial> impostoPadraoPorFilials;
-    @OneToMany(mappedBy = "filial")
-    private Collection<RateioCusto> rateioCustos;
-    @OneToMany(mappedBy = "filial")
-    private Collection<RateioCustoItem> rateioCustoItems;
-    @OneToMany(mappedBy = "filial")
-    private Collection<SubGrupoProduto> subGrupoProdutos;
-    @OneToMany(mappedBy = "filial")
-    private Collection<TabPreco> tabPrecos;
-    @OneToMany(mappedBy = "filial")
-    private Collection<TabPrecoItem> tabPrecoItems;
-    @OneToMany(mappedBy = "filial")
-    private Collection<UsuarioFilial> usuarioFilials;
 
 
     @Override

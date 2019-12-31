@@ -18,6 +18,6 @@ public class GrupoProdutoService extends BasicService<GrupoProduto, GrupoProduto
     @Override
     public Page<GrupoProduto> search(String descricao, Integer page, Integer linesPerPage, String orderBy, String direction) {
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
-        return repository.findDistinctByDsGrupoContaining(descricao, pageRequest);
+        return repository.findDistinctByDsGrupoContainingOrCdGrupoContaining(descricao, descricao, pageRequest);
     }
 }

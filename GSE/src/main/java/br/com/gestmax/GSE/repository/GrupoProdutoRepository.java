@@ -10,5 +10,5 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface GrupoProdutoRepository extends JpaRepository<GrupoProduto, Long> {
     @Transactional(readOnly = true)
-    Page<GrupoProduto> findDistinctByDsGrupoContaining(String nome, Pageable pageRequest);
+    Page<GrupoProduto> findDistinctByDsGrupoContainingOrCdGrupoContaining(String nome, Pageable pageRequest);
 }

@@ -1,5 +1,6 @@
 package br.com.gestmax.GSE.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,12 +27,16 @@ public class Estado implements BasicDomain {
     private Pais pais;
 
     @OneToMany(mappedBy = "estado")
+    @JsonIgnore
     private Collection<ExcecaoFiscal> excecaoFiscals;
     @OneToMany(mappedBy = "estado")
+    @JsonIgnore
     private Collection<ImpostoItem> impostoItems;
     @OneToMany(mappedBy = "estado")
+    @JsonIgnore
     private Collection<Municipio> municipios;
     @OneToMany(mappedBy = "estado")
+    @JsonIgnore
     private Collection<TabPreco> tabPrecos;
 
 

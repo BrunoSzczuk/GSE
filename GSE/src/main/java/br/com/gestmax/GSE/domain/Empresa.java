@@ -1,5 +1,6 @@
 package br.com.gestmax.GSE.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class Empresa implements BasicDomain {
     private Boolean stAtivo;
     private String cdEmpresa;
     @OneToMany(mappedBy = "empresa")
+    @JsonIgnore
     private Collection<Filial> filials;
 
 
