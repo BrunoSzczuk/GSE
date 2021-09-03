@@ -14,11 +14,11 @@ public class Pais implements BasicDomain {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @NotNull(message = "{pais_nome_not_null}")
-    @Size(min = 2, max = 60, message = "{pais_nome_size}")
+    @NotNull(message = "{pais_nmPais_not_null}")
+    @Size(min = 2, max = 60, message = "{pais_nmPais_size}")
     private String nmPais;
-    @NotNull(message = "{pais_sigla_not_null}")
-    @Size(min = 2, max = 60, message = "{pais_sigla_size}")
+    @NotNull(message = "{pais_sgPais_not_null}")
+    @Size(min = 2, max = 60, message = "{pais_sgPais_size}")
     private String sgPais;
 
 

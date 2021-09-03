@@ -1,6 +1,7 @@
 package br.com.gestmax.GSE.dto;
 
 import br.com.gestmax.GSE.domain.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -32,6 +33,7 @@ public class ProdutoDTO extends BasicDTO {
     private String dsOrigem;
     private BigDecimal qtMultiplicador;
     private String cdEan;
+    @JsonIgnore
     private Collection<ImpostoItem> impostoItems;
     private UnidadeMedida unidadeMedida;
     private Marca marca;

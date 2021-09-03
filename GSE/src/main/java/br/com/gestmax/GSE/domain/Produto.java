@@ -1,5 +1,6 @@
 package br.com.gestmax.GSE.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -42,6 +43,7 @@ public class Produto implements BasicDomain {
     private BigDecimal qtMultiplicador;
     @Column(length = 15)
     private String cdEan;
+    @JsonIgnore
     @OneToMany(mappedBy = "produto")
     private Collection<ImpostoItem> impostoItems;
     @ManyToOne
@@ -51,8 +53,10 @@ public class Produto implements BasicDomain {
     @ManyToOne
     private SubGrupoProduto subGrupoProduto;
     @OneToMany(mappedBy = "produto")
+    @JsonIgnore
     private Collection<RateioCustoItem> rateioCustoItems;
     @OneToMany(mappedBy = "produto")
+    @JsonIgnore
     private Collection<TabPrecoItem> tabPrecoItems;
 
 

@@ -1,5 +1,6 @@
 package br.com.gestmax.GSE.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ public class SubGrupoProduto implements BasicDomain {
     private String cdSubgrupo;
     private String dsSubgrupo;
     @OneToMany(mappedBy = "subGrupoProduto")
+    @JsonIgnore
     private Collection<Produto> produtos;
     @ManyToOne
     private Filial filial;

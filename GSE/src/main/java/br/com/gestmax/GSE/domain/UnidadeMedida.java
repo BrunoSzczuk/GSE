@@ -1,5 +1,6 @@
 package br.com.gestmax.GSE.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,6 +19,7 @@ public class UnidadeMedida implements BasicDomain {
     private String dsUnidadeMedida;
     private Integer qtCasasDecimais;
     @OneToMany(mappedBy = "unidadeMedida")
+    @JsonIgnore
     private Collection<Produto> produtos;
 
     @Override

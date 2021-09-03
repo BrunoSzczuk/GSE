@@ -15,7 +15,7 @@ public class PaisDTO extends BasicDTO<Pais> {
     @Size(min = 1, max = 60, message = "{pais_nmPais_size}")
     private String nmPais;
     @NotNull(message = "{pais_sgPais_not_null}")
-    @Size(min = 1, max = 2, message = "{pais_sgPais_size}")
+    @Size(min = 2, max = 60, message = "{pais_sgPais_size}")
     private String sgPais;
 
     public PaisDTO(Pais domain) {

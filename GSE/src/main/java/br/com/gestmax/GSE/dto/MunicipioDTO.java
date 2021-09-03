@@ -21,7 +21,7 @@ public class MunicipioDTO extends BasicDTO<Municipio> {
     private String nmMunicipio;
     private Integer qtPopulacao;
     @NotNull(message = "{municipio_cdUfibge_not_null}")
-    @Size(min = 1, max = 2, message = "{municipio_cdUfibge_size}")
+    @Size(min = 1, max = 60, message = "{municipio_cdUfibge_size}")
     private String cdUfibge;
     @JsonIgnore
     private Collection<Filial> filials;
